@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="Source\main.cpp" />
+    <ClCompile Include="Source\Globals\globals.cpp" />
+    <ClCompile Include="Source\Shaders\Utils\shaderLoader.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Globals\globals.hpp" />
+    <ClInclude Include="Source\Shaders\Utils\shaderLoader.hpp" />
+    <ClInclude Include="Source\Game\Challenges.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Colors.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Config.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameDraw.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameLogic.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\GameState.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Input.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Npcs.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\PixelArt.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\Renderer.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\World.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\TextRenderer.hpp">
+      <Filter>Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Game\External\gltext.h">
+      <Filter>Game\External</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\Shaders\SimpleFragmentShader.frag" />
+    <None Include="Source\Shaders\SimpleVertexShader.vert" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Game">
+      <UniqueIdentifier>{b28ab094-1627-45b8-a2e5-fd49cc2158a8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\External">
+      <UniqueIdentifier>{19c9d4cf-450f-4969-b109-d4eaa5f68806}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="Source\Shaders\PressStart2P-Regular.ttf" />
+  </ItemGroup>
+</Project>
