@@ -1,5 +1,5 @@
 #pragma once
-// TextRenderer.hpp  (glText version)
+
 // Draws text with glText: https://github.com/vallentin/glText
 
 
@@ -15,12 +15,14 @@
 
 GLTtext* textObject = nullptr;   // reused for every piece of text
 
+// Initialize the text renderer
 void initText()
 {
 	gltInit();
 	textObject = gltCreateText();
 }
 
+// Delete the text object when closing the game
 void deleteText()
 {
 	gltDeleteText(textObject);
@@ -32,10 +34,10 @@ float pixelsPerSquare()
 {
 	GLint viewport[4];
 	glGetIntegerv(GL_VIEWPORT, viewport);       // x, y, width, height
-	return viewport[2] / MAP_W;
+	return viewport[2] / MAP_W;					// Calculate how many pixels represent one map unit
 }
 
-// glText's font has no apostrophe, so ' is shown with the similar `
+// Replace apostrophes with a supported character
 void setText(const std::string& text)
 {
 	std::string t = text;
@@ -49,6 +51,7 @@ float textScale(float size)
 	return 5.0f * size * pixelsPerSquare() / gltGetLineHeight(1.0f);
 }
 
+// Calculate the width of a text
 float textWidth(const std::string& text, float size)
 {
 	if (text.empty()) return 0.0f;
@@ -56,20 +59,21 @@ float textWidth(const std::string& text, float size)
 	return gltGetTextWidth(textObject, textScale(size)) / pixelsPerSquare();
 }
 
+// Draw text at a given position
 void drawText(const std::string& text, float x, float y, float size, glm::vec4 color)
 {
 	if (text.empty()) return;
 	float ppu = pixelsPerSquare();
 	setText(text);
 
-	gltBeginDraw();
-	gltColor(color.r, color.g, color.b, color.a);
-	gltDrawText2D(textObject, x * ppu, y * ppu, textScale(size));
-	gltEndDraw();
-
+	gltBeginDraw();													    // Start drawing text
+	gltColor(color.r, color.g, color.b, color.a);						// Set the text color
+	gltDrawText2D(textObject, x * ppu, y * ppu, textScale(size));		// Draw the text on the screen
+	gltEndDraw();														// Finish drawing text
 	glUseProgram(programID);   // drawRect / drawCircle use the normal shader
 }
 
+// Draw text centered horizontally
 void drawTextCentered(const std::string& text, float centerX, float y, float size, glm::vec4 color)
 {
 	drawText(text, centerX - textWidth(text, size) / 2, y, size, color);
@@ -78,7 +82,7 @@ void drawTextCentered(const std::string& text, float centerX, float y, float siz
 // Text on a dark panel, centered horizontally
 void drawLabel(const std::string& text, float centerX, float y, float size, glm::vec4 color)
 {
-	float w = textWidth(text, size);
-	drawRect(centerX - w / 2 - 0.3f, y - 0.25f, w + 0.6f, 5 * size + 0.5f, PANEL);
-	drawText(text, centerX - w / 2, y, size, color);
+	float w = textWidth(text, size);												// Get the text width
+	drawRect(centerX - w / 2 - 0.3f, y - 0.25f, w + 0.6f, 5 * size + 0.5f, PANEL);  // Draw the background panel
+	drawText(text, centerX - w / 2, y, size, color);								// Draw the text in the center
 }
