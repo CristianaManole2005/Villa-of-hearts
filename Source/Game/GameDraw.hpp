@@ -1,5 +1,5 @@
 #pragma once
-// GameDraw.hpp
+
 // Drawing the map, challenge objects, characters and the UI
 
 #include <vector>
@@ -17,7 +17,7 @@
 
 // Shapes used by the challenges
 
-    
+
 // Bianca's hidden objects, drawn from simple shapes
 void drawHiddenObject(int index, glm::vec2 c, float alpha)
 {
@@ -389,7 +389,7 @@ void drawEndScreen()
 			const Npc& n = npcs[i];
 			std::string line = n.name + ": " + std::to_string(n.relationship) + "/100";
 			glm::vec4 color = PINK;
-			if (n.specialChoice == 1)      { line += " - YOUR PARTNER"; color = HEART_GOLD; }
+			if (n.specialChoice == 1) { line += " - YOUR PARTNER"; color = HEART_GOLD; }
 			else if (n.specialChoice == 2) { line += " - BEST FRIEND";  color = HEART_GOLD; }
 			drawTextCentered(line, MAP_W / 2, 14.0f + i * 1.2f, 0.18f, color);
 		}

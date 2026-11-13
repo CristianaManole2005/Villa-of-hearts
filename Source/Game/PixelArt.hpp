@@ -1,9 +1,6 @@
 #pragma once
-// ============================================================
-// PixelArt.hpp
-// Pixel-art bitmaps for the hearts and the characters
-// ============================================================
 
+// heart and character bitmaps
 
 // Each character in a bitmap is one "pixel" (a tiny square)
 const char* HEART_BITMAP[] = {
@@ -14,7 +11,7 @@ const char* HEART_BITMAP[] = {
 	"..XXX..",
 	"...X..."
 };
-const int HEART_W = 7, HEART_H = 6;
+const int HEART_W = 7, HEART_H = 6; // Character width and height
 
 // H = hair, S = skin, P = top, B = bottom
 const char* CHARACTER_BITMAP[] = {
@@ -39,4 +36,4 @@ const char* GIRL_BITMAP[] = {
 	"BBBBBB",
 	".S..S."
 };
-const int CHAR_W = 6, CHAR_H = 8;
+const int CHAR_W = 6, CHAR_H = 8; // Character width and height
