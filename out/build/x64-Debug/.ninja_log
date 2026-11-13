@@ -1,5 +1,0 @@
-# ninja log v6
-8	44	8162793658149985	C:/Users/Admin/Villa-of-hearts/out/build/x64-Debug/CMakeFiles/cmake.verify_globs	100273e4e8f9f5f3
-46	744	8162793658519220	CMakeFiles/ACG_Lab5.dir/Source/Globals/globals.cpp.obj	8eacbd084971183f
-57	1208	8162793658641416	CMakeFiles/ACG_Lab5.dir/Source/Shaders/Utils/shaderLoader.cpp.obj	31112f86f868f64b
-64	1333	8162793658711558	CMakeFiles/ACG_Lab5.dir/Source/main.cpp.obj	d3dfb44633e782ab
