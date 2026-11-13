@@ -1,4 +1,4 @@
-# Villa-of-hearts: Make Them Yours
+# Villa of hearts: Make Them Yours
 
 ## Game Story
 
