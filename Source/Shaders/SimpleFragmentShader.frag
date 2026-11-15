@@ -1,12 +1,16 @@
 #version 330 core
 
-// Ouput data
+in vec2 texCoords;
 out vec4 fragColor;
 
-uniform vec4 color;
+uniform vec4 objectColor;
+uniform sampler2D bgTexture;
+uniform bool useTexture;
 
 void main()
 {
-	// Output color = red 
-	fragColor = color;
+    if (useTexture)
+        fragColor = texture(bgTexture, texCoords);
+    else
+        fragColor = objectColor;
 }

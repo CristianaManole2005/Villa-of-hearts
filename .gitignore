@@ -5,4 +5,13 @@ out/build/
 *.obj
 *.pdb
 *.ilk
+*.ipch.vs/
+Debug/
+Release/
+x64/
+build/
+*.user
 *.ipch
+*.pdb
+*.obj
+*.exe

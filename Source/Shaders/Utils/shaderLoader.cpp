@@ -154,7 +154,7 @@ namespace ShaderLoaderUtils
 			return 0;
 		}
 
-		printf("Linking program... \n");
+		printf("Linking program... ");
 		GLuint programId = glCreateProgram();
 		glAttachShader(programId, vertexShaderId);
 		glAttachShader(programId, fragmentShaderId);

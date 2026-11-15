@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.15)
-project(ACG_Lab5 LANGUAGES CXX)
+project(ACG_Lab3 LANGUAGES CXX)
 
 # Set C++ standard and compiler options
 set(CMAKE_CXX_STANDARD 17)

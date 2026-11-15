@@ -18,7 +18,7 @@ set "CONFIG=Debug"
 set "BUILD_DIR=build"
 set "BIN_DIR=%BUILD_DIR%\Bin\%CONFIG%"
 set "COMPILER_PACKAGE=Microsoft.VisualStudio.2022.BuildTools"
-set "EXE_NAME=ACG_Lab5.exe"
+set "EXE_NAME=ACG_Lab3.exe"
 
 if not exist "Dependencies\Libraries\glfw3.lib" (
     echo Missing bundled GLFW library. Restore the Dependencies folder before continuing.

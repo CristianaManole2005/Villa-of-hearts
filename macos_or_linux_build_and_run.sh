@@ -64,7 +64,7 @@ fi
 CONFIG=Debug
 BUILD_DIR=build
 BIN_DIR="$BUILD_DIR/Bin"
-EXE_NAME="ACG_Lab5" 
+EXE_NAME="ACG_Lab3"
 
 cmake -S . -B "$BUILD_DIR" -DCMAKE_BUILD_TYPE="$CONFIG"
 cmake --build "$BUILD_DIR" --config "$CONFIG"
@@ -72,8 +72,7 @@ cmake --build "$BUILD_DIR" --config "$CONFIG"
 cd "$BIN_DIR"
 
 if [[ "$(uname -s)" == "Linux" && "${XDG_SESSION_TYPE:-}" == "wayland" ]]; then
-    unset WAYLAND_DISPLAY
-    export XDG_SESSION_TYPE=x11
+    ENV -U WAYLAND_DISPLAY XDG_SESSION_TYPE=x11
 fi
 
 ./"$EXE_NAME"
